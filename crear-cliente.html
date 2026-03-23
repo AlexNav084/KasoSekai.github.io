@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Kaso Sekai</title>
+    <link rel="stylesheet" href="css/style_sesion.css">
+    <link rel="stylesheet" href="css/style_index.css">
+    <script src="https://kit.fontawesome.com/5e528ab127.js" crossorigin="anonymous"></script>
+    <style>
+        body { background-color: #FFC0CB !important; font-family: Arial, sans-serif; }
+        .form-sesion { display: flex; justify-content: center; padding: 40px 0; }
+        form { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 400px; }
+        h2 { color: #ff2277; text-align: center; }
+        .input-box { position: relative; margin-top: 15px; }
+        .input-box input, .input-box textarea { width: 100%; padding: 10px 10px 10px 40px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .input-box .icon { position: absolute; left: 10px; top: 10px; color: #ff2277; }
+        #enviar { width: 100%; background: #ff2277; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header class="header-sesion" style="text-align: center; background: #ff78db; padding: 15px;">
+        <a href="index.html"><img src="img/Logo.png" width="100"></a>
+    </header>
+
+    <div class="form-sesion">
+        <form action="registrar_cliente.php" method="POST">
+            <h2>Crear cuenta</h2>
+            
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="apellidos" placeholder="Apellidos" required>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <textarea name="direccion" placeholder="Dirección completa" rows="2" required></textarea>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+
+            <input id="enviar" type="submit" value="Registrarme">
+            <h3 style="text-align:center; font-size: 0.9rem; margin-top:15px;">
+                ¿Ya tienes cuenta? <a href="iniciar_sesion.html" style="color: #ff2277;">Iniciar Sesión</a>
+            </h3>
+        </form>
+    </div>
+</body>
+</html>

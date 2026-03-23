@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Producto - Kaso Sekai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+    <div class="card mx-auto shadow p-4 rounded-4" style="max-width:500px; border-top: 5px solid #ff2277;">
+        <h4 class="text-center mb-4 text-primary"> Editar por ID</h4>
+
+        <form action="modificarproducto.php" method="POST">
+            
+            <div class="mb-3 p-3 bg-warning bg-opacity-10 rounded">
+                <label class="form-label fw-bold">ID del Producto a Modificar</label>
+                <input type="number" name="productoID" class="form-control border-primary" placeholder="Ingresa el ID (ej: 5)" required>
+                <small class="text-muted">Busca el ID en tu tabla de inventario.</small>
+            </div>
+
+            <hr>
+
+            <div class="mb-2">
+                <label class="form-label">Nuevo Nombre</label>
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre del producto" required>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Nuevo Precio</label>
+                <input type="number" step="0.01" name="precio" class="form-control" placeholder="0.00" required>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Actualizar Stock</label>
+                <input type="number" name="stock" class="form-control" placeholder="Cantidad en bodega" required>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Cliente Responsable</label>
+                <input type="text" name="nombre_cliente" class="form-control" placeholder="Nombre del cliente">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Estado de Venta</label>
+                <select name="estado" class="form-select">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nombre de Imagen</label>
+                <input type="text" name="imagen" class="form-control" placeholder="foto.jpg">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" style="background-color: #ff2277; border:none;">
+                Guardar Cambios
+            </button>
+            <a href="gerente-cuenta.php" class="btn btn-link w-100 text-secondary mt-2 text-decoration-none">← Volver</a>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

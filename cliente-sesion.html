@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Cliente - Kaso Sekai</title>
+    <link rel="stylesheet" href="css/style_sesion.css">
+    <link rel="stylesheet" href="css/style_index.css">
+    <script src="https://kit.fontawesome.com/5e528ab127.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilos Generales */
+        body {
+            background-color: #FFC0CB !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Encabezado */
+        .header-sesion {
+            background-color: #ff78db;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-sesion img {
+            width: 120px;
+            transition: transform 0.3s;
+        }
+
+        .header-sesion img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contenedor del Formulario */
+        .form-sesion {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        form h2 {
+            color: #ff2277;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Inputs */
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff2277;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 2px solid #ffe6f0;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .input-box input:focus {
+            border-color: #ff2277;
+            box-shadow: 0 0 8px rgba(255, 34, 119, 0.2);
+        }
+
+        /* Botón Iniciar Sesión */
+        #enviar {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff2277;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        #enviar:hover {
+            background-color: #e01b68;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(224, 27, 104, 0.3);
+        }
+
+        #enviar:disabled {
+            background-color: #6c757d !important;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Links */
+        h3 {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        h3 a {
+            color: #ff2277;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h3 a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mensaje de Error */
+        #mensaje-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.85rem;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-sesion">
+        <a href="index.html">
+            <img src="img/Logo.png" alt="Logo">
+        </a>
+    </header>
+
+    <div class="form-sesion">
+        <form id="loginForm" action="perfil-cliente.html" method="post">
+            <h2>Cliente</h2>
+            <div id="mensaje-error"></div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <div style="text-align: right; margin-top: -10px; margin-bottom: 20px;">
+                <a href="recuperar.html" style="color: #ff2277; font-size: 0.8rem; text-decoration: none;">¿Olvidaste tu
+                    contraseña?</a>
+            </div>
+
+            <input id="enviar" type="submit" value="Iniciar sesión">
+            <h3>¿No tienes cuenta? <a href="crear-cliente.html">Crea tu cuenta</a></h3>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p><strong>Kaso Sekai S.A de C.V</strong></p>
+            <p>Teléfono: 5534095567</p>
+            <p>Dirección: Nezahualcóyotl, Estado de México</p>
+            <p>&#169; Anime Soul</p>
+        </div>
+    </footer>
+
+   <script>
+    let intentos = 0;
+    const max = 3;
+    const espera = 30;
+
+    const form = document.getElementById('loginForm');
+    const err = document.getElementById('mensaje-error');
+    const btn = document.getElementById('enviar');
+
+    form.addEventListener('submit', function (e) {
+        // Ya NO usamos e.preventDefault() aquí de entrada, 
+        // para que el formulario sí se envíe a PHP.
+        if (btn.disabled) {
+            e.preventDefault();
+        }
+    });
+
+    // Esta función la llamaremos si PHP nos avisa que falló
+    function bloquear() {
+        let seg = espera;
+        btn.disabled = true;
+        btn.value = "Bloqueado";
+        err.style.display = "block";
+        const id = setInterval(() => {
+            err.innerHTML = `<i class="fa-solid fa-clock"></i> Reintenta en ${seg}s`;
+            seg--;
+            if (seg < 0) {
+                clearInterval(id);
+                btn.disabled = false;
+                btn.value = "Iniciar sesión";
+                err.style.display = "none";
+            }
+        }, 1000);
+    }
+</script>
+</body>
+
+</html>
