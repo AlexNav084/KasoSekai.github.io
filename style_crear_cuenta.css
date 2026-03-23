@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.header-sesion{
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 34, 119);
+
+}
+
+.header-sesion img{
+    width: 16%;
+    display:flex;
+    margin: 2% auto;
+}
+
+/* RESET de reglas conflictivas (asegura comportamiento consistente) */
+.form-sesion input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: auto;          /* lo ajustamos con calc() abajo */
+  margin: 18px 0;       /* margen vertical para separar filas */
+  padding: 14px 16px;   /* padding interior legible */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.12);
+  vertical-align: middle;
+}
+
+/* ICONO: inline, centrado y encima del input */
+.form-sesion .icon {
+  display: inline-block;
+  width: 40px;               /* ancho reservado para el icono */
+  min-width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 8px 0 0;        /* separacion a la derecha del icono */
+  font-size: 18px;
+  color: #000;
+  line-height: 1;           /* evita desplazamientos */
+  z-index: 2;
+}
+
+/* Cuando el icono va ANTES del input (tu caso): ajustamos el ancho del input */
+.form-sesion .icon + input {
+  width: calc(100% - 48px);  /* 40px del icono + 8px margen */
+}
+
+/* Asegura que el form distribuya correctamente las filas (no fuerce full width) */
+.form-sesion form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #0d5cfabb;
+  padding: 3% 5%;
+  /* fuerza que los elementos inline quepan en su propia "línea" */
+  white-space: normal;
+}
+
+/* Estilo del botón enviar para que quede coherente */
+#enviar {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 18px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background: #eee;
+  color: #111;
+  font-size: 1rem;
+}
+
+/* Pequeña corrección para iconos y inputs en móviles */
+@media (max-width: 600px) {
+  .form-sesion .icon { display: none; }               /* opcional: ocultar iconos en pantallas pequeñas */
+  .form-sesion input { width: 100%; }                 /* inputs full width en móvil */
+}
+
+
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: #122222;
+    font-size: 1.2rem;
+}
+
+.input-box input {
+    padding-left: 45px;
+    border-radius: 5px;
+}
+
+
+

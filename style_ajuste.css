@@ -1,0 +1,154 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Diseñar el encabezado*/
+.kaso-header {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 34, 119);
+}
+
+.kaso-header img {
+    float: left;
+    width: 12%;
+    margin: 0.5% 1%;
+}
+
+.kaso-header nav {
+    width: 75%;
+    display: flex;
+    margin: 1% auto;
+}
+
+.kaso-header a {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.kaso-header a:hover {
+    color: rgb(66, 97, 36);
+}
+
+/* Banner*/
+.kaso-banner {
+    max-width: 100%;
+}
+
+.kaso-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/*Novedades*/
+.kaso-nov {
+    max-width: 100%;
+    margin: 2%;
+}
+
+.kaso-nov h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+}
+
+.kaso-nov p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    color: rgb(7, 7, 7);
+    letter-spacing: 1px;
+}
+
+/* --- CORRECCIÓN PRINCIPAL AQUÍ --- */
+/* He agrupado todas tus clases específicas e IDs en una sola regla para unificarlas */
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, #cosplay2, .ajuste, .kaso-gallery img {
+    width: 100%;          /* Que ocupen todo el ancho de la tarjeta */
+    height: 350px;        /* Altura fija para todas (puedes ajustar este número) */
+    object-fit: cover;    /* IMPORTANTE: Recorta la imagen para no deformarla */
+    border-radius: 6%;    /* Mantengo tu borde redondeado */
+    padding: 0;           /* He quitado el padding interno de la imagen para que se vea mejor */
+    display: block;
+}
+/* -------------------------------- */
+
+.red1, .red2 {
+    width: 50px;
+    height: auto;
+}
+
+/*Galeria*/
+.kaso-conteiner {
+    max-width: 80%;
+    margin: 2% 10%;
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; -> Recomiendo usar 1fr para mejor distribución */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 4%;
+}
+
+.kaso-gallery {
+    max-width: 100%;
+    border: 8px;
+    border-radius: 16px;
+    padding: 8%;
+    box-shadow: 1px 12px #585656;
+    cursor: pointer;
+    background-color: white;
+    /* Para alinear el contenido de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Nota: Eliminé la regla anterior de ".kaso-gallery img" porque ya la incluí en la corrección de arriba */
+
+.kaso-gallery p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw; /* Ajusté un poco el tamaño */
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: cadetblue;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.kaso-gallery:hover {
+    transition: all 500ms ease;
+    transform: scale(1.05); /* Reduje un poco la escala para que no choque */
+    /* transform: rotate(-2deg); -> Opcional, a veces descuadra la grilla */
+}
+
+.kaso-gallery:hover #precio {
+    color: rgb(255, 145, 0);
+}
+
+#precio {
+    font-weight: bold;
+    color: lightseagreen;
+}
+
+.footer {
+    width: 100%;
+    height: 110px;
+    background-color: rgb(83, 82, 82);
+    position: relative;
+    margin-top: 50px; /* Un poco más de margen para separar del grid */
+}
+
+.footer p {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: rgb(231, 226, 226);
+    text-align: center;
+}

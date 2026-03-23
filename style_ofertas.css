@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+
+
+/* Diseñar el encabezado*/
+.kaso-header{
+    max-width: 100%;
+    overflow: hidden;
+    background-color:rgb(255, 34, 119);
+    
+}
+.kaso-header img{
+    float: left;
+    width: 12%;
+    margin: 0.5% 1%;
+}
+.kaso-header nav{
+    width: 75%;
+    display: flex;
+    margin: 1% auto;
+
+}
+.kaso-header a{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 0.5px;
+
+
+}
+.kaso-header a:hover{
+    color: rgb(66, 97, 36);
+}
+
+/* Banner*/
+.kaso-banner{
+  max-width: 100%;
+  
+
+}
+.kaso-banner img{
+  width: 100%;
+  height: 750px;
+
+
+}
+
+
+.img1{
+  width: 400px;
+  height: auto;
+}
+
+
+.img2{
+  width: 420px;
+  height: auto
+}
+
+.img3{
+  width: 400px;
+  height: auto;
+
+}
+
+.kaso-conteiner{
+  max-width: 80%;
+  margin: 2% 10%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 4%;
+  
+ }
+
+ .kaso-gallery{
+  max-width: 100%;
+  border: 8px;
+  border: 8px;
+  border-radius: 16px;
+  padding: 8%;
+  
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.kaso-gallery img {
+  
+   border-radius: 6%;
+  padding: 4%;
+}
+
+
+
+
+
+  .img7{
+  width: 300px;
+   height: auto;
+ }
+
+
+ .img8{
+  width: 350px;
+   height: auto;
+ }
+
+ .img9{
+   width: 250px;
+   height: auto;
+ }
+
+ .img10{
+   width: 300px;
+   height: auto;
+
+
+ }
+
+ .kaso-nov{
+  max-width: 100%;
+  margin: 2%;
+}
+
+.kaso-nov h2{
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 4vw;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+.kaso-nov p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3vw;
+  text-align: center;
+  color: rgb(7, 7, 7);
+  letter-spacing: 1px;
+}
+
+
+
+ .kaso-conteine{
+  width: 95%;
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+
+ .kaso-galler{
+  max-width: 100%;
+  border: 8px;
+  border-radius: 16px;
+  padding: 2%;
+  box-shadow: 1px 12px #585656;
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.kaso-galler img{
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  padding: 0;
+}
+
+
+.kaso-galler p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+  letter-spacing: 0.5px ;
+  color: rgb(113, 0, 0);
+  text-align: left;
+
+}
+.precio-oferta{
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.precio-oferta .tachado{
+  text-decoration: line-through;
+  color: #585656;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.kaso-galler:hover{
+  transition: all 500ms ease;
+  transform: scale(1.1) rotate(-2deg);
+  
+  }
+
+
+.footer{
+  width: 100%;
+  height: 180px;
+  background-color: rgb(83, 82, 82);
+  position: relative;
+  margin-top: 0.5%;
+}
+
+.footer p{
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1;
+  color: rgb(231, 226, 226);
+  text-align: center;
+}

@@ -1,0 +1,72 @@
+/*Estilo Consulta detalle COSPLAY*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+
+
+
+/*Detallepro*/
+.kaso-detail{
+    max-width: 70%;
+    margin: 4% 10% 16%;
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap: 1%;
+
+}
+
+.kaso-detail img{
+    width: 80%;
+    margin:0% 10% ;
+    padding: 4% 15%;
+    
+}
+
+.kaso-descdetail{
+    width: 100%;
+    margin: 4% 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1vw ;
+    letter-spacing: 0.5px;
+    color: rgb(46, 44, 44);
+    text-align: left;
+
+}
+
+#nomdetail{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+#precdetail{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.578);
+
+}
+#btncomprar{
+    width: 85%;
+    margin: 10% 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    padding: 3%;
+    border: 1px solid;
+    border-radius: 2px;
+    border-style: outset;
+    background-color: rgb(0, 0, 164);
+    cursor: pointer;
+
+
+}
+
+#btncomprar:hover{
+    background-color: rgb(60, 60, 195);
+}

@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header-sesion {
+    width: 100%;
+    background-color: rgb(255, 34, 119);
+}
+
+.header-sesion img {
+    width: 16%;
+    display: block;
+    margin: 2% auto;
+}
+
+.form-sesion {
+    max-width: 500px; /* Reduje el ancho para que se vea más como una tarjeta central */
+    margin: 5% auto;
+    box-shadow: 0 8px 12px #6b6b6b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo del contenedor azul interno */
+.form-content {
+    background-color: #0d5cfabb;
+    padding: 40px;
+    text-align: center; /* Centra el texto H2 y H3 */
+}
+
+.form-content h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white; /* Cambié a blanco para mejor contraste con el azul */
+}
+
+/* CENTRADO DE BOTONES */
+.roles {
+    display: flex;
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-rol {
+    text-decoration: none;
+    background-color: white;
+    color: rgb(255, 34, 119);
+    padding: 12px 20px;
+    min-width: 120px; /* Ancho mínimo para que todos se vean similares */
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.btn-rol:hover {
+    background-color: rgb(255, 34, 119);
+    color: white;
+    border-color: rgb(255, 34, 119);
+}
+
+.create-account {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.create-account a {
+    color: #ffde59;
+    text-decoration: none;
+}
+
+/* Footer simple */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
