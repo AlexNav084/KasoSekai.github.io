@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña - Kaso Sekai</title>
+    <link rel="stylesheet" href="css/style_sesion.css">
+    <link rel="stylesheet" href="css/style_index.css">
+    <script src="https://kit.fontawesome.com/5e528ab127.js" crossorigin="anonymous"></script>
+    <style>
+        body { background-color: #FFC0CB !important; font-family: sans-serif; display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
+        .header-sesion { background-color: #ff78db; padding: 20px; text-align: center; }
+        .form-sesion { flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        form { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        h2 { color: #ff2277; margin-bottom: 15px; }
+        p { color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        .input-box { position: relative; margin-bottom: 20px; }
+        .input-box .icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #ff2277; }
+        .input-box input { width: 100%; padding: 12px 15px 12px 45px; border: 2px solid #ffe6f0; border-radius: 10px; box-sizing: border-box; }
+        #enviar { width: 100%; padding: 12px; background-color: #ff2277; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        #enviar:hover { background-color: #e01b68; }
+    </style>
+</head>
+<body>
+    <header class="header-sesion">
+        <a href="index.html"><img src="img/Logo.png" width="100"></a>
+    </header>
+
+    <div class="form-sesion">
+        <form id="formRecuperar" action="enviar_recuperacion.php" method="post">
+            <h2>Recuperar acceso</h2>
+            <p>Ingresa tu correo electrónico para restablecer tu contraseña.</p>
+            
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" id="emailRecuperar" name="email" placeholder="Correo electrónico" required>
+            </div>
+
+            <input id="enviar" type="submit" value="Enviar instrucciones">
+            
+            <div style="margin-top: 20px;">
+                <a href="cliente-sesion.html" style="color: #ff2277; text-decoration: none; font-size: 0.9rem;">Volver al inicio de sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById('formRecuperar').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('emailRecuperar').value;
+        alert("¡Solicitud recibida! Se han enviado las instrucciones de recuperación al correo: " + email + "\n\nPor favor, revisa tu bandeja de entrada o carpeta de SPAM.");
+        document.getElementById('emailRecuperar').value = "";
+    });
+</script>
+</body>
+</html>

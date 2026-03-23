@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pasarela de Pago</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #ff91f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+label {
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+/* Filas */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* Mensajes */
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+#id{
+    width: 16%;
+    display:flex;
+    margin: 2% auto;
+}
+.kaso-header{
+    max-width: 100%;
+    overflow: hidden;
+    background-color:rgb(255, 34, 119);
+    
+}
+.kaso-header img{
+    float: left;
+    width: 12%;
+    margin: 0.5% 1%;
+}
+
+</style>
+</head>
+
+<body>
+    <header id="kaso-header"> <img  id="img"  src="img/Logo.png" alt="Logo"></header>
+
+<div class="container">
+    <h2>💳 Pago Seguro</h2>
+
+    <label>Nombre</label>
+    <input type="text" id="name">
+
+    <label>Número de tarjeta</label>
+    <input type="text" id="card" maxlength="16">
+
+    <div class="row">
+        <div>
+            <label>MM/AA</label>
+            <input type="text" id="date" maxlength="5">
+        </div>
+        <div>
+            <label>CVV</label>
+            <input type="password" id="cvv" maxlength="3">
+        </div>
+    </div>
+
+    <label>Monto</label>
+    <input type="number" id="amount">
+
+    <button onclick="pay()">Pagar</button>
+
+    <div id="msg" class="message"></div>
+</div>
+
+<script>
+function pay() {
+    let name = document.getElementById("name").value;
+    let card = document.getElementById("card").value;
+    let date = document.getElementById("date").value;
+    let cvv = document.getElementById("cvv").value;
+    let amount = document.getElementById("amount").value;
+    let msg = document.getElementById("msg");
+
+    // 🔍 VALIDACIONES
+    if (!name || !card || !date || !cvv || !amount) {
+        msg.textContent = "⚠️ Completa todos los campos";
+        msg.className = "message error";
+        return;
+    }
+
+    if (card.length !== 16 || isNaN(card)) {
+        msg.textContent = "❌ Tarjeta inválida";
+        msg.className = "message error";
+        return;
+    }
+
+    if (!date.match(/^(0[1-9]|1[0-2])\/\d{2}$/)) {
+        msg.textContent = "❌ Fecha inválida (MM/AA)";
+        msg.className = "message error";
+        return;
+    }
+
+    if (cvv.length !== 3 || isNaN(cvv)) {
+        msg.textContent = "❌ CVV inválido";
+        msg.className = "message error";
+        return;
+    }
+
+    // ⏳ SIMULACIÓN DE API
+    msg.textContent = "Procesando pago...";
+    msg.className = "message";
+
+    setTimeout(() => {
+        msg.textContent = "✅ Pago realizado con éxito";
+        msg.className = "message success";
+    }, 2000);
+}
+</script>
+
+</body>
+</html>
